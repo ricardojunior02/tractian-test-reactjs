@@ -37,31 +37,37 @@ export const Container = styled.div`
 
         margin-left: 5px;
         margin-top: 5px;
-        /* padding: 10px; */
 
         .content {
+          height: 150px;
           padding: 10px;
+          
           h2 {
-          text-align: start;
+            text-align: start;
           }
 
           a {
             display: flex;
             justify-content: space-between;
+            text-align: center;
             text-decoration: none;
             color: #000;
+            
+
+            p {
+              margin: 0;
+            }
           }
         }
 
-        nav {
-          width: 100%;
-          display: flex;
-          justify-content: space-around;
-          align-items: center;
-
-          border-top: 1px solid var(--color-blue);
-
-          padding: 10px;
+          nav {
+            width: 100%;
+            height: 50px;
+            display: flex;
+            justify-content: space-around;
+            align-items: center;  
+            border-top: 1px solid var(--color-blue);
+            padding: 10px;
           
           .att {
             width: 40%;

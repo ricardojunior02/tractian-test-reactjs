@@ -124,7 +124,6 @@ const Dashboard = () => {
                   < FiChevronRight size={25} color="var(--color-blue)" />
                 </Link>
               </div>
-              
               <nav>
                 <button className="att" onClick={() => openForm(company._id, company.name)}>Atualizar</button>
                 <Popconfirm
