@@ -18,23 +18,6 @@ export const Container = styled.div`
             opacity: 1;
         }
     } 
-
-    nav {
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-        border-top: 1px solid var(--color-blue);
-
-        padding: 10px;
-
-        h1 {
-            font-size: 40px;
-        }
-
-        svg:hover {
-            cursor: pointer;
-        }
-    } 
 `;
 
 export const Content = styled.div`
