@@ -26,7 +26,7 @@ export const Container = styled.div`
         grid-template-columns: 1fr 1fr 1fr 1fr;
         grid-gap: 5px;
         list-style: none;
-        margin: 10px 0;
+        padding: 10px 5px;
 
       li {
         width: 100%;
@@ -35,40 +35,26 @@ export const Container = styled.div`
         box-shadow:  var(--shadow);
         border-radius: 10px;
 
-        margin-left: 5px;
-        margin-top: 5px;
-
         .content {
-          height: 150px;
           padding: 10px;
-          
-          h2 {
-            text-align: start;
-          }
 
           a {
             display: flex;
             justify-content: space-between;
-            text-align: center;
             text-decoration: none;
             color: #000;
-            
-
-            p {
-              margin: 0;
-            }
+            margin-top: 15px;
           }
         }
 
-          nav {
-            width: 100%;
-            height: 50px;
-            display: flex;
-            justify-content: space-around;
-            align-items: center;  
-            border-top: 1px solid var(--color-blue);
-            padding: 10px;
-          
+        nav.buttons {
+          display: flex;
+          justify-content: space-around;
+          align-items: center;
+          padding: 10px;
+          border-top: 1px solid var(--color-blue);
+
+              
           .att {
             width: 40%;
             height: 25px;
@@ -80,10 +66,9 @@ export const Container = styled.div`
             text-align: center;
             border-radius: 10px;
 
-            transition: 0.5s;
-          
+            transition: 0.5s;      
           }
-          
+            
           .att:hover {
             opacity: 0.6;
           }
@@ -98,7 +83,6 @@ export const Container = styled.div`
             border-radius: 10px;
 
             border: none;
-
             transition: 0.5s;
           }
 
