@@ -118,13 +118,13 @@ const Dashboard = () => {
           {companies.map(company => (
             <li key={company._id}>
               <div className="content">
-                <h2>{company.name}</h2>
+                <h3>{company.name}</h3>
                 <Link to={`units/${company._id}`}>
                   <p>Possui <strong>{company.units.length}</strong> unidades</p>
                   < FiChevronRight size={25} color="var(--color-blue)" />
                 </Link>
               </div>
-              <nav>
+              <nav className="buttons">
                 <button className="att" onClick={() => openForm(company._id, company.name)}>Atualizar</button>
                 <Popconfirm
                   title="Deseja realmente excluir essa compania?"
