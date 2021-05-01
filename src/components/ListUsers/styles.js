@@ -23,6 +23,7 @@ export const Container = styled.ul`
       justify-content: space-around;
       align-items: center;
       padding: 10px;
+      border-top: 1px solid var(--color-blue);
             
       .att {
         width: 40%;
