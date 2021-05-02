@@ -3,7 +3,7 @@ import ModalUpdateAsset from '../ModalUpdateAsset';
 import { Popconfirm, message } from 'antd';
 import { Container, Image, InfoData, Actions } from './styles';
 
-const CardAssets = ({ data, onClick, setReload }) => {
+const CardAssets = ({ data, deleteAssets, setReload }) => {
   const [ showModal, setShowModal ] = useState(false);
   const [ assetId, setAssetId ] = useState('');
   const [ active, setActive ] = useState({});
@@ -39,7 +39,7 @@ const CardAssets = ({ data, onClick, setReload }) => {
           <button onClick={() => openModal(assets._id, assets)} className="att">Atualizar</button>
           <Popconfirm
             title="Deseja realmente excluir esse ativo?"
-            onConfirm={() => onClick(assets._id)}
+            onConfirm={() => deleteAssets(assets._id)}
             onCancel={cancel}
             okText="Excluir"
             cancelText="Fechar"

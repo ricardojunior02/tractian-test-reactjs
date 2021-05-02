@@ -20,7 +20,11 @@ export const Content = styled.div`
   a {
     background: transparent;
   }
-  
+
+  @media (max-width: 525px){
+    height: auto;
+    flex-direction: column;
+  }
 `;
 export const Logo = styled.img`
   width: 300px;
@@ -38,7 +42,9 @@ export const Navigation = styled.div`
     margin: 0;
 
     list-style: none;
+
     li {
+      
       button {
         color: #FFF;
         text-decoration: none;
@@ -73,5 +79,12 @@ export const Navigation = styled.div`
         cursor: pointer;
       }
     } 
+  }
+
+  @media (max-width: 721px){
+    ul {
+      flex-direction: column;
+      margin-top: 10px;
+    }
   }
 `;
