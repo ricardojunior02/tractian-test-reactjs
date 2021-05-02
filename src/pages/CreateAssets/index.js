@@ -25,7 +25,6 @@ const CreateUser = () => {
 
   const handleCreateAssets = async (data) => {
     try {
-      console.log(data)
       await api.post(`/create-active/${_id}`,{...data, unity: _id});
       message.success('Ativo criado com sucesso');
       history.push(`/unity/${_id}`)
@@ -42,9 +41,7 @@ const CreateUser = () => {
 
       return setUsers(dataUser);
     }
-    console.log(reload);
     if(reload){
-      console.log(reload);
       loadUnity();
       return setReload(false);
     }
