@@ -79,9 +79,13 @@ const Unity = () => {
   };
 
   const deleteAssets = async (_id) => {
-    await api.delete(`/delete-active/${_id}`);
-    message.success('Ativo excluido com sucesso');
-    setReload(true);
+    try {
+      await api.delete(`/delete-active/${_id}`);
+      setReload(true);
+      return message.success('Ativo excluido com sucesso');
+    } catch (error) {
+      return message.error('Erro ao excluir ativo')
+    }
   }
 
   const deleteUnity = async (_id) => {
@@ -90,7 +94,7 @@ const Unity = () => {
       history.push(`/units/${companyId}`);
       return message.success('Unidade deletada com sucesso'); 
     } catch (error) {
-      message.error('Erro ao excluir unidade');
+      return message.error('Erro ao excluir unidade');
     }
   }
   
@@ -119,7 +123,7 @@ const Unity = () => {
 
     if(reload){
       loadUnity();
-      setReload(false);
+      return setReload(false);
     }
 
     loadUnity();
@@ -185,7 +189,7 @@ const Unity = () => {
           <ul>
             <CardAssets
               data={assets}
-              onClick={deleteAssets}
+              deleteAssets={deleteAssets}
               setReload={setReload}
             />
           </ul>  
