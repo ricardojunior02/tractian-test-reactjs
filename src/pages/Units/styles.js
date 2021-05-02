@@ -91,5 +91,24 @@ export const Navigation = styled.div`
     svg:hover {
         cursor: pointer;
     }
+
+    @media (max-width: 581px){
+        h1 {
+            font-size: 30px;
+        }
+    }
+
+    @media (max-width: 375px){
+        h1 {
+            font-size: 23px;
+        }
+    }
+
+
+    @media (max-width: 510px){
+        h1 {
+            font-size: 25px;
+        }
+    }
 `;
 

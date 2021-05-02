@@ -33,6 +33,26 @@ export const Content = styled.div`
         list-style: none;
         margin: 10px 0;
     }
+
+    @media (max-width: 737px){
+        ul {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-gap: 5px;
+        list-style: none;
+        padding: 10px 5px;
+        }
+    }
+
+    @media (max-width: 500px){
+        ul {
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-gap: 5px;
+        list-style: none;
+        padding: 10px 5px;
+        }
+    }
 `;
 
 export const Main = styled.main`
@@ -116,4 +136,28 @@ export const Navigation = styled.div`
      opacity: 0.6;
      cursor: pointer;
     }
+
+    @media (max-width: 581px){
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 10px 0;
+
+        h1 {
+            font-size: 30px;
+        }
+    }
+
+    @media (max-width: 375px){
+        h1 {
+            font-size: 23px;
+        }
+    }
+    
+    @media (max-width: 510px){
+        h1 {
+            font-size: 25px;
+        }
+    }
+   
 `;

@@ -3,19 +3,41 @@ import styled from 'styled-components';
 export const Container = styled.div`
   max-width: var(--max-width);
   margin: 0 auto;
-   nav {
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
+  nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
 
-        h1 {
-            font-size: 40px;
-        }
+    svg:hover {
+      cursor: pointer;
+    }
+  }
 
-        svg:hover {
-            cursor: pointer;
-        }
-    } 
+    
+  @media (max-width: 581px){
+    nav {
+      h1 {
+        font-size: 30px;
+      }
+    }
+  }
+
+  @media (max-width: 375px){
+    nav {
+      h1 {
+         font-size: 23px;
+      }
+    }
+  }
+
+
+  @media (max-width: 510px){
+    nav {
+      h1 {
+         font-size: 25px;
+      }
+    }
+  }
 `;
 export const Content = styled.div`
   width: 100%;
@@ -23,6 +45,12 @@ export const Content = styled.div`
   display: flex;
   justify-content: space-around;
   align-items: center;
+
+  @media (max-width: 800px){
+    display: flex;
+    flex-direction: column;
+    padding: 0 5px;
+  }
 `;
 
 export const CreateUserForm = styled.div`
@@ -37,6 +65,10 @@ export const CreateUserForm = styled.div`
   justify-content: center;
   align-items: center;
   flex-direction: column;
+
+  h2 {
+    text-align: center;
+  }
 
   form {
     width: 100%;
@@ -85,6 +117,11 @@ export const CreateUserForm = styled.div`
     }
   }
 
+  @media (max-width: 800px){
+    width: 100%;
+    height: 60%;
+    margin-top: 15px;
+  }
   
 `;
 
@@ -100,6 +137,10 @@ export const CreateUnityForm = styled.div`
   justify-content: center;
   align-items: center;
   flex-direction: column;
+
+  h2 {
+    text-align: center;
+  }
 
   form {
     width: 100%;
@@ -144,6 +185,11 @@ export const CreateUnityForm = styled.div`
       color: var(--color-blue);
       cursor: pointer;
     }
+  }
+
+  @media (max-width: 800px){
+    width: 100%;
+    height: 60%;
   }
 `;
 
